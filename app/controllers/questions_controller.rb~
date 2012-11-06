@@ -1,0 +1,19 @@
+class QuestionsController < ApplicationController
+
+  def index
+    @questions = Question.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @question }
+    end
+  end
+
+  def get_answers(q_id)
+    @answers = Answer.where(question_id: q_id)
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @answer }
+    end
+  end
+end
