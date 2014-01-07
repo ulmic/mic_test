@@ -13,20 +13,21 @@
 
 ActiveRecord::Schema.define(:version => 20121025090443) do
 
+  create_table "answers", :force => true do |t|
+    t.integer  "question_id"
+    t.integer  "user_id"
+    t.integer  "variant_id"
+    t.string   "text"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "questions", :force => true do |t|
     t.text     "text"
     t.text     "answer"
     t.integer  "right_answer_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-  end
-
-  create_table "user_answers", :force => true do |t|
-    t.integer  "question_id"
-    t.integer  "user_id"
-    t.string   "answer"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|

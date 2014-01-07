@@ -4,8 +4,8 @@ class Question < ActiveRecord::Base
                   :right_answer_id
 
   has_many :answers
+  has_many :variants
 
-  validates :answer
   validates :right_answer_id, presence: true
   validates :text, presence: true
 end
