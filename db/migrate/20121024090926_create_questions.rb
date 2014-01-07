@@ -3,6 +3,7 @@ class CreateQuestions < ActiveRecord::Migration
     create_table :questions do |t|
       t.text :text
       t.text :answer
+      t.integer :right_answer_id
 
       t.timestamps
     end
