@@ -21,10 +21,10 @@ ActiveRecord::Schema.define(:version => 20121025090443) do
   end
 
   create_table "questions", :force => true do |t|
-    t.text     "question_text"
-    t.string   "correct_answer"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.text     "text"
+    t.text     "answer"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "user_answers", :force => true do |t|

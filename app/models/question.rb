@@ -1,4 +1,4 @@
 class Question < ActiveRecord::Base
-  attr_accessible :correct_answer, :question_text
+  attr_accessible :answer, :text
   has_many :answers
 end
