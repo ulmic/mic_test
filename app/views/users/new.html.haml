@@ -1,54 +1,9 @@
-<style>
-  table {
-      padding: 20px;
-      -moz-border-radius: 20px;
-      -webkit-border-radius: 20px;
-      line-height: 2;
-  }
-  div {
-      vertical-align: middle;
-      height: 100%;
-      font-family: PFBeauSansPro-Reg;
-  }
-  @font-face {
-      font-family: PFBeauSansPro-Reg;
-      src: url(<%= asset_path('PFBeauSansPro-Reg.ttf') %>);
-  }
-</style>
+= stylesheet_link_tag :user
 
-<div id='main' align='center'>
-  <%= form_for :user do |user|  %>
-      <table bgcolor='#fbbc3b'>
-        <tr>
-          <td align='right'>
-            <%= user.label :ФИО %>
-          </td>
-          <td align='center'>
-            <%=  user.text_field :fio %>
-          </td>
-        </tr>
-        <tr>
-          <td align='right'>
-            <%= user.label :Отделение %>
-          </td>
-          <td align='center'>
-            <%= user.text_field :department %>
-          </td>
-        </tr>
-        <tr>
-          <td align='right'>
-            <%= user.label :Номер_членского_билета %>
-          </td>
-          <td align='center'>
-            <%= user.number_field :card_num, :style=>'width: 248px' %>
-          </td>
-        </tr>
-        <tr>
-          <th colspan="2">
-            <%= user.submit :value=>"Начать тест!" %>
-          </th>
-        </tr>
-      </table>
-
-  <% end %>
-</div>
+#main{ align: "center" }
+  = simple_form_for @user do |f|
+    = f.input :fio
+    = f.input :department
+    = f.input :card_num
+    .actions
+      = f.submit

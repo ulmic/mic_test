@@ -1,0 +1,5 @@
+ru:
+  flash_messages:
+    users:
+      create:
+        success: Вы успешно зарегистрированы
