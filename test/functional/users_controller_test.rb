@@ -16,7 +16,7 @@ class UsersControllerTest < ActionController::TestCase
     assert_response :redirect
 
     user = User.last
-    assert_equal attributes[:first_name], user.first_name
+    assert_equal attributes[:fio], user.fio
   end
 
 end
