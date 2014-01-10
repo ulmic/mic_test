@@ -2,8 +2,12 @@ ru:
   activerecord:
     models:
       user: Пользователь
+      answer: Ответ
     attributes:
       user:
         fio: "Ф.И.О."
         district: Местное отделение
         card_num: Номер членского билета
+      answer:
+        variant: Вариант ответа
+        text: Напишите ваш ответ
