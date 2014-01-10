@@ -26,7 +26,7 @@ class Admin::QuestionsController < Admin::ApplicationController
   end
 
   def index
-    @questions = Question.all
+    @questions = Question.all.reverse
   end
 
   def destroy
