@@ -8,5 +8,6 @@ MicTest::Application.routes.draw do
   namespace :admin do
     resources :questions
     resource :sessions, only: [ :new, :create, :destroy ]
+    resources :variants, except: [ :show ]
   end
 end
