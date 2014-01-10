@@ -1,6 +1,10 @@
 class Admin::SessionsController < ApplicationController
   def new
-    @admin = Admin.new
+    if admin_signed_in?
+      redirect_to admin_questions_path
+    else
+      @admin = Admin.new
+    end
   end
 
   def create
