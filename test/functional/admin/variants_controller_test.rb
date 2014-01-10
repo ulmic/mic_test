@@ -3,6 +3,7 @@ require 'test_helper'
 class Admin::VariantsControllerTest < ActionController::TestCase
   setup do
     @variant = create :variant
+    @question = create :question
     @admin = create :admin
     admin_sign_in @admin
   end
@@ -13,14 +14,14 @@ class Admin::VariantsControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    get :new
+    get :new, id: @question
     assert_response :success
   end
 
   test "should create variant" do
     attributes = attributes_for :variant
 
-    post :create, variant: attributes
+    post :create, id: @question, variant: attributes
     assert_response :redirect
 
     variant = Variant.last
