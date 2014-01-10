@@ -5,5 +5,5 @@ ru:
     attributes:
       user:
         fio: "Ф.И.О."
-        department: Местное отделение
+        district: Местное отделение
         card_num: Номер членского билета
