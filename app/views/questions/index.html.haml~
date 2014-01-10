@@ -1,4 +1,0 @@
-%div {:style => "align='center'", :id => "main"}
-  - @questions.each do |question|
-      %p= question.question_text
-        %br

@@ -11,28 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121025090443) do
+ActiveRecord::Schema.define(:version => 20140107134547) do
+
+  create_table "admins", :force => true do |t|
+    t.string   "login"
+    t.string   "password"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
-    t.string   "answer_text"
+    t.integer  "user_id"
+    t.integer  "variant_id"
+    t.string   "text"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
   create_table "questions", :force => true do |t|
-    t.text     "question_text"
-    t.string   "correct_answer"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-  end
-
-  create_table "user_answers", :force => true do |t|
-    t.integer  "question_id"
-    t.integer  "user_id"
-    t.string   "answer"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.text     "text"
+    t.text     "answer"
+    t.integer  "right_answer_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -41,6 +43,13 @@ ActiveRecord::Schema.define(:version => 20121025090443) do
     t.integer  "card_num"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "variants", :force => true do |t|
+    t.integer  "question_id"
+    t.string   "text"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

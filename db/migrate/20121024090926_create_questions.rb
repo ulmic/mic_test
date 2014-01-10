@@ -1,8 +1,9 @@
 class CreateQuestions < ActiveRecord::Migration
   def change
     create_table :questions do |t|
-      t.text :question_text
-      t.string :correct_answer
+      t.text :text
+      t.text :answer
+      t.integer :right_answer_id
 
       t.timestamps
     end

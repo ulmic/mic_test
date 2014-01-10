@@ -1,3 +1,0 @@
-class Question < ActiveRecord::Base
-  attr_accessible :correct_answer, :question_text
-end

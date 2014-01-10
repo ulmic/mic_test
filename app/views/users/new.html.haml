@@ -1,0 +1,10 @@
+= stylesheet_link_tag :user
+
+#main{ align: "center" }
+  = simple_form_for @user do |f|
+    - f.with_options input_html: { class: :span6 } do |f|
+      = f.input :fio
+      = f.input :department
+      = f.input :card_num, as: :string
+      .actions
+        = f.submit t('.registration')
