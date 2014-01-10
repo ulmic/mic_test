@@ -1,4 +1,5 @@
 class Question < ActiveRecord::Base
+  next_record_order :id
   attr_accessible :answer,
                   :text,
                   :right_answer_id

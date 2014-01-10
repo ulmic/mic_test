@@ -51,4 +51,12 @@ class Admin::QuestionsControllerTest < ActionController::TestCase
     assert_template :edit
   end
 
+  test "should detroy question" do
+    assert_difference('Question.count', -1) do
+      delete :destroy, id: @question
+    end
+
+    assert_redirected_to admin_questions_path
+
+  end
 end

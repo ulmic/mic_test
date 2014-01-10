@@ -30,8 +30,8 @@ class Admin::QuestionsController < Admin::ApplicationController
   end
 
   def destroy
-    @question = Question.destroy
+    @question = Question.find params[:id]
     @question.destroy
-    redirect_to :root
+    redirect_to admin_questions_path
   end
 end
