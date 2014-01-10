@@ -6,5 +6,6 @@ MicTest::Application.routes.draw do
   resources :users, only: [ :new, :create ]
   namespace :admin do
     resources :questions
+    resource :sessions, only: [ :new, :create, :destroy ]
   end
 end
