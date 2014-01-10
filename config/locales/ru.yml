@@ -1,4 +1,8 @@
 ru:
   users:
     new:
-      registration: Зарегистрироваться
+      registration: Зарегистрироваться для прохождения теста
+  answers:
+    new:
+      choose_right_answer: Выберите ответ
+      give_answer: Дать ответ

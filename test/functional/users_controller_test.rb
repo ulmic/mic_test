@@ -13,6 +13,8 @@ class UsersControllerTest < ActionController::TestCase
   test "should create user" do
     @question = create :question
     attributes = attributes_for :user
+    district = create :district
+    attributes[:district_id] = district.id
     post :create, user: attributes
     assert_response :redirect
 

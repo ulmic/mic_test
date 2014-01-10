@@ -3,8 +3,8 @@
 #main{ align: "center" }
   = simple_form_for @user do |f|
     - f.with_options input_html: { class: :span6 } do |f|
-      = f.input :fio
-      = f.input :department
+      = f.input :fio, as: :string
+      = f.association :district, value_method: :id, label_method: :title
       = f.input :card_num, as: :string
       .actions
         = f.submit t('.registration')
