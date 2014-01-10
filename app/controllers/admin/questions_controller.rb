@@ -6,7 +6,7 @@ class Admin::QuestionsController < Admin::ApplicationController
   def create
     @question = Question.new params[:question]
     if @question.save
-      redirect_to @question, flash: :success
+      redirect_to admin_questions_path, flash: :success
     else
       render action: :new, flash: :error
     end
@@ -15,7 +15,7 @@ class Admin::QuestionsController < Admin::ApplicationController
   def update
     @question = Question.find params[:id]
     if @question.update_attributes params[:question]
-      redirect_to @question, flash: :success
+      redirect_to admin_questions_path, flash: :success
     else
       render action: :edit, flash: :error
     end
