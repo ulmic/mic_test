@@ -7,6 +7,7 @@ gem 'simple_form'
 gem 'twitter-bootstrap-rails'
 gem 'haml-rails'
 gem 'bootstrap_flash_messages'
+gem 'russian'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

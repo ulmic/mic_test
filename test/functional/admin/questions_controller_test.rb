@@ -19,26 +19,12 @@ class Admin::QuestionsControllerTest < ActionController::TestCase
 
   test "should create question" do
     attributes = attributes_for :question
-    district = create :district
-    attributes[:district_id] = district.id
 
     post :create, question: attributes
     assert_response :redirect
 
-    question = question.last
-    assert_equal attributes[:first_name], question.first_name
-  end
-
-  test "should not create question" do
-    attributes = { email: @question.email, password: @question.password }
-
-    post :create, question: attributes
-    assert_response :success
-  end
-
-  test "should show question" do
-    get :show, id: @question
-    assert_response :success
+    question = Question.last
+    assert_equal attributes[:text], question.text
   end
 
   test "should get edit by admin" do
@@ -52,12 +38,12 @@ class Admin::QuestionsControllerTest < ActionController::TestCase
     assert_response :redirect
 
     @question.reload
-    assert_equal attributes[:first_name], @question.first_name
+    assert_equal attributes[:text], @question.text
   end
 
   test "should not update question with render edit" do
     attributes = attributes_for :question
-    attributes[:first_name] = nil
+    attributes[:text] = nil
     put :update, id: @question, question: attributes
 
     assert_response :success
@@ -65,22 +51,4 @@ class Admin::QuestionsControllerTest < ActionController::TestCase
     assert_template :edit
   end
 
-  test "should destroy question" do
-    delete :destroy, id: @question
-    @question.reload
-    assert @question.busted?
-    assert_redirected_to questions_path
-  end
-
-  test "should accept question" do
-    put :accept, id: @question
-    @question.reload
-    assert @question.accepted?
-  end
-
-  test "should reserve question" do
-    put :reserve, id: @question
-    @question.reload
-    assert @question.reserved?
-  end
 end
