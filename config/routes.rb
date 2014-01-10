@@ -2,8 +2,16 @@ MicTest::Application.routes.draw do
   root to: 'users#new'
   match 'question' => 'questions#index'
   match 'foo' => 'questions#foo'
-  resources :questions
-  resources :users, only: [ :new, :create ]
+  resources :questions do
+    member do
+      resources :answers, only: [ :new, :create ]
+    end
+  end
+  resources :users, only: [ :new, :create ] do
+    collection do
+      get :success
+    end
+  end
   get "admin" => "admin/sessions#new"
   namespace :admin do
     resources :questions do
