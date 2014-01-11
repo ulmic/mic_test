@@ -18,6 +18,11 @@ end
 
 group :production do
   gem 'pg'
+  gem 'capistrano', '~>2.15.5'
+  gem 'unicorn'
+  gem 'rvm-capistrano'
+  gem 'capi'
+  gem 'capistrano_colors'
 end
 
 group :test do
@@ -30,4 +35,3 @@ group :test do
 end
 
 gem 'jquery-rails'
-gem 'capistrano', '~>2.15.5'
