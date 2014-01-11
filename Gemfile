@@ -30,3 +30,4 @@ group :test do
 end
 
 gem 'jquery-rails'
+gem 'capistrano', '~>2.15.5'
