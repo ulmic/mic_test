@@ -1,4 +1,4 @@
-development:
+\development:
   adapter: sqlite3
   database: db/development.sqlite3
   pool: 5
@@ -11,7 +11,6 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: mic_test_production
+  database: mic_event
   pool: 5
-  username: mic_test
-  password: mic_test73
+  username: mic_event
