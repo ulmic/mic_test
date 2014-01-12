@@ -1,5 +1,6 @@
 ru:
   auth: Авторизация
+  cancel: Отмена
   users:
     new:
       registration: Зарегистрироваться для прохождения теста

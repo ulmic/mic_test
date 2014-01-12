@@ -3,6 +3,7 @@ ru:
     models:
       user: Пользователь
       answer: Ответ
+      admin: Администратор
     attributes:
       user:
         fio: "Ф.И.О."
@@ -11,3 +12,6 @@ ru:
       answer:
         variant: Вариант ответа
         text: Напишите ваш ответ
+      admin:
+        login: Логин
+        password: Пароль
