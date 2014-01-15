@@ -1,6 +1,7 @@
 ru:
   auth: Авторизация
   cancel: Отмена
+  sign_in: Войди, если уже регистрировался
   sign_out: Выйти
   new: Добавить
   edit: Изменить
@@ -22,6 +23,9 @@ ru:
     new:
       choose_right_answer: Выберите ответ
       give_answer: Дать ответ
+  sessions:
+    new:
+      put_correctly: 'Введите точно так же, как вводили при регистрации'
 
   admin:
     questions:

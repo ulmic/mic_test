@@ -6,6 +6,9 @@ ru:
     answers:
       create:
         success: Ваш ответ принят
+    sessions:
+      create:
+        success: Авторизация прошла успешно
     admin:
       sessions:
         create:
