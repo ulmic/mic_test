@@ -3,3 +3,16 @@ ru:
     users:
       create:
         success: Вы успешно зарегистрированы
+    answers:
+      create:
+        success: Ваш ответ принят
+    admin:
+      sessions:
+        create:
+          success: Авторизация администратора прошла успешно
+      questions:
+        create:
+          success: Вопрос создан успешно
+      variants:
+        create:
+          success: Вариант ответа успешно добавлен
