@@ -3,9 +3,9 @@
     .logo.mic
       %a{ href: "http://ulmic.ru" }
 .row-fluid
+  %hr
   .offset2
   .span5
-    %hr
     %a &copy
     = copyright_notice_year_range(2012)
     %a{ href: "http://ulmic.ru" }
@@ -17,3 +17,6 @@
     %small
       %a{ href: "http://github.com/ulmic/mic_test" }
         = t('.this_project_on_the_Github')
+  - if user_signed_in?
+    .span2
+      = link_to t('sign_out'), sessions_path, method: :delete, class: 'btn btn-danger'
