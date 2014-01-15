@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   def new
-    @user = User.new
+    unless current_user
+      @user = User.new
+    else
+      redirect_to new_answer_path(Question.first)
+    end
   end
 
   def create
