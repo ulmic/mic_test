@@ -1,10 +1,32 @@
 ru:
   auth: Авторизация
   cancel: Отмена
+  sign_out: Выйти
+  new: Добавить
+  edit: Изменить
+  destroy: Удалить
+  layouts:
+    application:
+      mic_test: Тест премии Признание
+    footer:
+      youth_initiative_centre: Молодёжный инициативный центр
+      this_project_develop_by_programmers_of_ulmic: Команда разработчиков ИТ-проектов МИЦ
+      this_project_on_the_Github: Этот проект на Github
   users:
     new:
       registration: Зарегистрироваться для прохождения теста
+    success:
+      congrtulations: 'Поздравляем,'
+      you_have_passed_mic_test: ', вы прошли Тест корпоративной премии "Признание" Молодёжного инициативного центра!!!'
   answers:
     new:
       choose_right_answer: Выберите ответ
       give_answer: Дать ответ
+
+  admin:
+    questions:
+      index:
+        title: Вопросы
+        add_answer: Добавить вариант ответ
+        actions: Действия
+

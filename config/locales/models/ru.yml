@@ -4,6 +4,7 @@ ru:
       user: Пользователь
       answer: Ответ
       admin: Администратор
+      question: Вопрос
     attributes:
       user:
         fio: "Ф.И.О."
@@ -15,3 +16,9 @@ ru:
       admin:
         login: Логин
         password: Пароль
+      question:
+        text: Текст вопроса
+        answer: Ответ на вопрос
+        right_answer_id: Номер верного варианта ответа
+        variants: Варианты ответа
+
