@@ -18,8 +18,8 @@ module AuthHelper
     session[:user_id] && User.find_by_id(session[:user_id])
   end
 
-  def authenticate_user?(user, password)
-    user.password === password
+  def authenticate_user?(user, fio)
+    user.fio === fio
   end
 
   def current_user

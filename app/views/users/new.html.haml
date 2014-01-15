@@ -5,4 +5,5 @@
       = f.association :district, value_method: :id, label_method: :title
       = f.input :card_num, as: :string
       .actions
-        = f.submit t('.registration')
+        = f.submit t('.registration'), class: 'btn btn-success'
+  = link_to t('sign_in'), new_sessions_path, class: 'btn btn-success'
