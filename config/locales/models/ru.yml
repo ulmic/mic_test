@@ -12,6 +12,7 @@ ru:
         card_num: Номер членского билета
       answer:
         variant: Вариант ответа
+        question: Вопрос
         text: Напишите ваш ответ
       admin:
         login: Логин

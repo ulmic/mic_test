@@ -33,4 +33,8 @@ ru:
         title: Вопросы
         add_answer: Добавить вариант ответ
         actions: Действия
+    answers:
+      index:
+        title: Ответы на вопросы
+        points: ' баллов '
 

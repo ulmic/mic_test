@@ -1,21 +1,38 @@
+= stylesheet_link_tag :answers
+
 - model_class = Answer
 .page-header
-  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+  %h1
+    = t '.title'
+    = @answers.first.user.fio
+  %h3
+    = points(@answers)
+    = t('.points')
+
 %table.table.table-striped
   %thead
     %tr
-      %th= model_class.human_attribute_name(:id)
-      %th= model_class.human_attribute_name(:question_id)
-      %th= model_class.human_attribute_name(:user_id)
-      %th= model_class.human_attribute_name(:variant_id)
+      %th= t('ru.activerecord.attributes.answers.question')
+      %th= t('ru.activerecord.attributes.answers.variant')
       %th= model_class.human_attribute_name(:text)
       %th= model_class.human_attribute_name(:created_at)
   %tbody
     - @answers.each do |answer|
-      %tr
-        %td= answer.id
-        %td= answer.question_id
-        %td= answer.user_id
-        %td= answer.variant_id
-        %td= answer.text
-        %td=l answer.created_at
+      - if answer.check == :right
+        %tr.success
+          %td= answer.question_id
+          %td= answer.variant_id
+          %td= answer.text
+          %td=l answer.created_at
+      - elsif answer.decorate.check == :wrong
+        %tr.error
+          %td= answer.question_id
+          %td= answer.variant_id
+          %td= answer.text
+          %td=l answer.created_at
+      - elsif
+        %tr
+          %td= answer.question_id
+          %td= answer.variant_id
+          %td= answer.text
+          %td=l answer.created_at
