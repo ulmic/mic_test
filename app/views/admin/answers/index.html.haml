@@ -4,7 +4,8 @@
 .page-header
   %h1
     = t '.title'
-    = @answers.first.user.fio
+    - if @answers.any?
+      = @answers.first.user.fio
   %h3
     = points(@answers)
     = t('.points')
