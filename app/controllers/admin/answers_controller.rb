@@ -8,5 +8,6 @@ class Admin::AnswersController < Admin::ApplicationController
         @answers << answer
       end
     end
+    @answers = AnswerDecorator.decorate_collection @answers
   end
 end

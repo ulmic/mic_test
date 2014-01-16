@@ -9,6 +9,7 @@ gem 'haml-rails'
 gem 'bootstrap_flash_messages'
 gem 'russian'
 gem 'next_record'
+gem 'draper'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
