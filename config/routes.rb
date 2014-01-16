@@ -22,5 +22,10 @@ MicTest::Application.routes.draw do
     end
     resources :variants, only: :index
     resource :sessions, only: [ :new, :create, :destroy ]
+    resources :users, only: :index do
+      member do
+        resources :answers, only: :index
+      end
+    end
   end
 end

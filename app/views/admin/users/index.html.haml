@@ -1,0 +1,19 @@
+- model_class = User
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+%table.table.table-striped
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:fio)
+      %th= model_class.human_attribute_name(:district_id)
+      %th= model_class.human_attribute_name(:card_num)
+      %th= model_class.human_attribute_name(:created_at)
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.id
+        %td= link_to user.fio, admin_answers_path(user)
+        %td= user.district_id
+        %td= user.card_num
+        %td=l user.created_at
