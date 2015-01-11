@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :user do
     card_num { generate :integer }
-    district
+    district { generate :string }
     fio { generate :string }
   end
 end

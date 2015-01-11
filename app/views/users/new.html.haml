@@ -2,7 +2,7 @@
   = simple_form_for @user do |f|
     - f.with_options input_html: { class: :span6 } do |f|
       = f.input :fio, as: :string
-      = f.association :district, value_method: :id, label_method: :title
+      = f.input :district, as: :select, collection: MICDistricts.all
       = f.input :card_num, as: :string
       .actions
         = f.submit t('.registration'), class: 'btn btn-success'
