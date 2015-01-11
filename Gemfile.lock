@@ -79,6 +79,7 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.2)
     kgio (2.9.2)
+    libv8 (3.16.14.7)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -127,6 +128,7 @@ GEM
     rake (10.4.2)
     rdoc (3.12.2)
       json (~> 1.4)
+    ref (1.0.5)
     request_store (1.1.0)
     russian (0.6.0)
       i18n (>= 0.5.0)
@@ -157,6 +159,9 @@ GEM
       minitest (~> 4.3.0)
       term-ansicolor (~> 1.0.7)
     term-ansicolor (1.0.7)
+    therubyracer (0.12.1)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.19.1)
     tilt (1.4.1)
     treetop (1.4.15)
@@ -204,6 +209,7 @@ DEPENDENCIES
   simplecov
   sqlite3
   tconsole
+  therubyracer
   turn
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)

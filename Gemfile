@@ -6,6 +6,7 @@ gem 'sqlite3'
 gem 'pg'
 gem 'simple_form'
 gem 'twitter-bootstrap-rails'
+gem "therubyracer"
 gem 'haml-rails'
 gem 'bootstrap_flash_messages'
 gem 'russian'
