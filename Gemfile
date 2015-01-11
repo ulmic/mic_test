@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.17'
 
 gem 'sqlite3'
+gem 'pg'
 gem 'simple_form'
 gem 'twitter-bootstrap-rails'
+gem "therubyracer"
 gem 'haml-rails'
 gem 'bootstrap_flash_messages'
 gem 'russian'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140110074649) do
+ActiveRecord::Schema.define(:version => 20150111203912) do
 
   create_table "admins", :force => true do |t|
     t.string   "login"
@@ -45,10 +45,10 @@ ActiveRecord::Schema.define(:version => 20140110074649) do
 
   create_table "users", :force => true do |t|
     t.text     "fio"
-    t.integer  "district_id"
     t.integer  "card_num"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.text     "district"
   end
 
   create_table "variants", :force => true do |t|
