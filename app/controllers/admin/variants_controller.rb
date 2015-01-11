@@ -1,7 +1,6 @@
 class Admin::VariantsController < Admin::ApplicationController
   def new
     @variant = Variant.new
-    @question = Question.find params[:id]
   end
 
   def create

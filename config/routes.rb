@@ -15,12 +15,8 @@ MicTest::Application.routes.draw do
   resource :sessions, only: [ :new, :create, :destroy ]
   get "admin" => "admin/sessions#new"
   namespace :admin do
-    resources :questions do
-      member do
-        resources :variants, except: [ :index, :show ]
-      end
-    end
-    resources :variants, only: :index
+    resources :questions
+    resources :variants, except: [ :show ]
     resource :sessions, only: [ :new, :create, :destroy ]
     resources :users, only: :index do
       member do
