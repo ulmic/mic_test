@@ -6,8 +6,8 @@
       %h2
         = @question.text
       - if @question.variants.any?
-        = f.association :variant, value_method: :id, label_method: :text, collection: @question.variants, prompt: t('.choose_right_answer')
+        = f.association :variant, required: true, value_method: :id, label_method: :text, collection: @question.variants, prompt: t('.choose_right_answer')
       - else
-        = f.input :text
+        = f.input :text, required: true
     .actions
       = f.submit t('.give_answer')
