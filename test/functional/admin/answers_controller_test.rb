@@ -11,4 +11,12 @@ class Admin::AnswersControllerTest < ActionController::TestCase
     get :index, id: @answer.user
     assert_response :success
   end
+
+  test "should get index with variants" do
+    variant = create :variant
+    variant.question_id = @answer.question_id
+    variant.save
+    get :index, id: @answer.user
+    assert_response :success
+  end
 end
