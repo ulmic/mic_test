@@ -33,6 +33,7 @@ group :test do
   gem 'factory_girl_rails', require: false
   gem 'turn'
   gem 'tconsole', git: "git://github.com/gma/tconsole"
+  gem 'pry'
 end
 
 gem 'jquery-rails'
