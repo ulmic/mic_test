@@ -22,18 +22,24 @@
       - if answer.check == :right
         %tr.success
           %td= answer.question.text
-          %td= answer.variant.text
+          %td
+            - if answer.variant
+              = answer.variant.text
           %td= answer.text
           %td=l answer.created_at
       - elsif answer.decorate.check == :wrong
         %tr.error
           %td= answer.question.text
-          %td= answer.variant.text
+          %td
+            - if answer.variant
+              = answer.variant.text
           %td= answer.text
           %td=l answer.created_at
       - elsif
         %tr
           %td= answer.question.text
-          %td= answer.variant.text
+          %td
+            - if answer.variant
+              = answer.variant.text
           %td= answer.text
           %td=l answer.created_at
