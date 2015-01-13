@@ -1,5 +1,8 @@
 class AnswersController < ApplicationController
   def new
+    unless params[:id]
+      redirect_to success_users_path
+    end
     @question = Question.find params[:id]
     @answer = Answer.new
   end
